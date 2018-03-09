@@ -74,7 +74,9 @@ namespace ThomasClaudiusHuber.Mvvm.Uwp.Extensions
           element.DataContext = item;
           node.Content = element;
 
-          // Implicitly bind the TreeViewNode's IsExpanded property to an IsExpanded property of the data item
+          // Implicitly bind the TreeViewNode's IsExpanded property to an IsExpanded property of the data item (=department in this sample)
+          // TODO: This is hardcoded and bad. Tried to create a Setter on the TreeViewItem Style like this:
+          // <Setter Property="IsExpanded" Value="{Binding IsExpanded,Mode=TwoWay}"/>, but it didn't do the trick.
           var b = new Binding { Source = item, Path = new PropertyPath("IsExpanded"), Mode = BindingMode.TwoWay };
           BindingOperations.SetBinding(node, TreeViewNode.IsExpandedProperty, b);
 
