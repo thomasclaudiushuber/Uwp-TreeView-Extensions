@@ -71,8 +71,8 @@
         <RowDefinition/>
       </Grid.RowDefinitions>
       <StackPanel>
-        <Button Content="Show selected departments" Click="{x:Bind ViewModel.RefreshSelectedDepartments}" Margin="10"/>
         <ToggleButton Content="Toggle root department" Click="{x:Bind ViewModel.ToogleRootDepartment}" Margin="10"/>
+        <Button Content="Show selected departments" Click="{x:Bind ViewModel.RefreshSelectedDepartments}" Margin="10"/>
       </StackPanel>
       <ListView Grid.Row="1" ItemsSource="{x:Bind ViewModel.SelectedDepartments}" DisplayMemberPath="DepartmentName"/>
     </Grid>
