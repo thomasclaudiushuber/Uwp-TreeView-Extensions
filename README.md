@@ -49,9 +49,4 @@ The ImplicitTemplateList can contain two kind of templates: ImplicitTemplate or 
     </TreeView>
 ```
 
-When you look at this line it looks a bit odd that the properties are just strings. Unfortunately I haven't found a better way yet:
-```xml
-<ext:HierarchicalImplicitTemplate ItemsSourcePropertyName="Children" DataTypeName="Department">
-```
-It seems that a property of type System.Type can't be set from UWP XAML. It only works for built-in properties like Style.TargetType or ControlTemplate.TargetType. That's the reason why I take a DataTypeName.
 
